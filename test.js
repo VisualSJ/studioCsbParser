@@ -1,11 +1,9 @@
+const Fs = require('fs');
+const CSParseBinary = require('./CSParseBinary');
 
+var json = CSParseBinary.parse(Fs.readFileSync('./test.csb'));
 
-const Parser = require('./parser');
-const Writer = require('./writer');
+console.log(json);
 
-//var obj = Parser('./res/MainScene.csb');
-var obj = Parser('./test.csb');
-
-console.log(obj.nodeTree.options.data);
-
-//Writer(obj, 'test.csb');
+var buffer = CSParseBinary.compile(json);
+Fs.writeFileSync('./test.csb', buffer);
