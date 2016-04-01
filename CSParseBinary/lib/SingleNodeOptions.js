@@ -13,7 +13,7 @@ exports.parse = function ( flat ) {
 
 exports.compile = function ( root, json ) {
     var nodeOptions = WidgetOptions.compile(root, json.nodeOptions);
-    CSParseBinary.SpriteOptions.startSpriteOptions(root);
-    CSParseBinary.SpriteOptions.addNodeOptions(root, nodeOptions);
-    return CSParseBinary.SpriteOptions.endSpriteOptions(root);
+    CSParseBinary.SingleNodeOptions.startSingleNodeOptions(root);
+    CSParseBinary.SingleNodeOptions.addNodeOptions(root, nodeOptions);
+    return CSParseBinary.SingleNodeOptions.endSingleNodeOptions(root);
 };

@@ -70,3 +70,13 @@ exports.parseBlendFunc = function ( flat ) {
     json.dst = flat.dst();
     return json;
 };
+
+exports.parseCapInsets = function ( flat ) {
+    var json = {};
+    if (!flat) return json;
+    json.x = flat.x();
+    json.y = flat.y();
+    json.width = flat.width();
+    json.height = flat.height();
+    return json;
+};

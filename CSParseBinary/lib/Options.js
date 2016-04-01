@@ -6,7 +6,11 @@ const Parser = {
     'Node': require('./WidgetOptions'),
     'Sprite': require('./SpriteOptions'),
     'SingleNode': require('./SingleNodeOptions'),
-    'ParticleSystem': require('./ParticleSystemOptions')
+    'ParticleSystem': require('./ParticleSystemOptions'),
+
+    'GameMapOptions': require('./GameMapOptions'),
+    'ButtonOptions': require('./ButtonOptions'),
+    'CheckBoxOptions': require('./CheckBoxOptions'),
 };
 
 exports.parse = function ( flat, type ) {
